@@ -1,0 +1,30 @@
+{
+  "name": "es6-calculator",
+  "version": "1.0.0",
+  "description": "Practicing Javascript ES6",
+  "main": "js/app.js",
+  "scripts": {
+    "serve": "./node_modules/.bin/http-server -a localhost -p 8000 -c-1",
+    "build": " npm run build-css && npm run build-js",
+    "build-css": "node-sass --output-style compressed -o dist/css src/sass/app.scss",
+    "build-js": "./node_modules/.bin/babel src/js -d dist/js",
+    "watch-js": "nodemon -e js --watch src/js -x \"npm run build-js\"",
+    "watch-sass": "nodemon -e scss --watch src/sass -x \"npm run build-css\"",
+    "watch": "npm run watch-sass && npm run watch-js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FadumaM/es6-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FadumaM/es6-calculator/issues"
+  },
+  "homepage": "https://github.com/FadumaM/es6-calculator#readme",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "node-sass": "^3.10.1"
+  }
+}
