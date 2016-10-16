@@ -1,6 +1,5 @@
 @import "variables/color";
 
-
 * {
 	margin: 0;
 	padding: 0;
@@ -13,7 +12,7 @@
 
 html {
 	height: 100%;
-	background-color: $badass;
+	background-color: $backgroundColor;
 }
 
 
@@ -29,6 +28,9 @@ html {
 	box-shadow:  0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
+li{
+  list-style: none;
+}
 
 .top li.clear {
 	position:absolute;
@@ -37,7 +39,7 @@ html {
 }
 
 
-.top .screen {
+.top #screen {
 	height: 80px;
 	width: 100%;
 	position:absolute;
@@ -114,12 +116,12 @@ html {
 
 .top li.clear:hover {
   border-radius:190px;
-	background: rgba(0,0,0,0.1);
+	background: darken($calculator-background, 20%);
 	color: white;
 }
 
 .keys li:active {
-	box-shadow: 0px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px lighten($calculator-background , 20%);
 	top: 4px;
 }
 
