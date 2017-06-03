@@ -1,3 +1,1 @@
-# es6-practice
-
-Practicing Javascript ES6
+# es6-Calculator
