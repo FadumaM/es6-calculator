@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Practice</title>
-    <link rel="stylesheet" href="/dist/css/app.css" media="screen" title="no title">
-    <script src="/dist/js/app.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div id="calculator">
-      	<ul class="top">
-      		<li class="clear">C</li>
-      		<li id="screen">&nbsp;</li>
-      	</ul>
-      	<ul class="keys">
-      		<li>7</li>
-      		<li>8</li>
-      		<li>9</li>
-      		<li class="operator">+</li>
-      		<li>4</li>
-      		<li>5</li>
-      		<li>6</li>
-      		<li class="operator">-</li>
-      		<li>1</li>
-      		<li>2</li>
-      		<li>3</li>
-      		<li class="operator">÷</li>
-      		<li>0</li>
-      		<li>.</li>
-      		<li class="eval">=</li>
-      		<li class="operator">x</li>
-      	</ul>
-      </div>
-    </div>
-  </body>
+	<head>
+		<title>Javascript es6 Calculator</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+	</head>
+	<body>
+		<main>
+      <section id="calc_wrapper">
+        <div class="calcDisplay">
+          <p id="display"></p>
+        </div>
+        <div class="calculator">
+          <div id="inputs">
+            <p class="input calc_num">7</p>
+            <p class="input calc_num">8</p>
+            <p class="input calc_num">9</p>
+            <p class="input calc_num">4</p>
+            <p class="input calc_num">5</p>
+            <p class="input calc_num">6</p>
+            <p class="input calc_num">1</p>
+            <p class="input calc_num">2</p>
+            <p class="input calc_num">3</p>
+            <p class="input calc_num">0</p>
+            <p id="enter">=</p>
+          </div>
+          <div id="operations">
+            <p class="input clear">C</p>
+            <p class="input operand">*</p>
+            <p class="input operand">/</p>
+            <p class="input operand">+</p>
+            <p class="input operand">-</p>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+      </section>
+		</main>
+		<script src="/js/app.js"></script>
+	</body>
 </html>
