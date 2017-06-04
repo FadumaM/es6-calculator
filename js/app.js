@@ -1,5 +1,6 @@
 let equation = []
-let display ;
+let display;
+let val = 0;
 
 const reset = () => {
   equation = [];
@@ -13,25 +14,17 @@ const calculate = () => {
   equation = [answer];
 }
 
-const clearDisplay = () => display.innerText = '';
+const addEquation = () => {
+  if (isFinite(val) || isFinite(equation[equation.length - 1])) {
+    equation.push(val);
+  }
+};
 
-const addDisplay = (val) => {
+const addDisplay = () => {
+  val = event.target.innerText;
   display = document.getElementById('display');
-  isFinite(val) ? display.innerText += val : clearDisplay();
-};
-
-const addEquation = (val) => {
-  if (isFinite(val)) {
-    equation.push(val);
-  }else if (isFinite(equation[equation.length - 1])) {
-    equation.push(val);
-  };
-};
-
-const getValue = (event) => {
-  const val = event.target.innerText;
-  addEquation(val);
-  addDisplay(val);
+  isFinite(val) ? display.innerText += val : display.innerText = '';
+  addEquation();
 };
 
 const addEventListener = () => {
@@ -40,7 +33,7 @@ const addEventListener = () => {
   const clear = document.querySelector('.clear');
   enter.addEventListener('click', calculate);
   numbers.map(number => {
-    number.addEventListener('click', getValue)
+    number.addEventListener('click', addDisplay)
   });
   clear.addEventListener('click', reset);
 };
